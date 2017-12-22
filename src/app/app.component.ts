@@ -1,3 +1,4 @@
+import { Conta } from '../model/conta.to';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  _contas : Conta[] = [];
+
+  _contaSelecionada : Conta = null;
+  
   title = 'app';
 }

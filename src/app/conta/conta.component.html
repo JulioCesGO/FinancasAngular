@@ -1,0 +1,51 @@
+<p>
+  Conta
+</p>
+
+<div>
+  <div>
+      <label>Banco</label>
+      <input name="banco" [ngModel]="conta.banco" type="text" />
+  </div>
+</div>
+<div>
+  <div>
+      <label>Agencia</label>
+      <input name="agencia" [ngModel]="conta.agencia" type="text" />
+  </div>
+</div>
+<div>
+  <div>
+      <label>Numero</label>
+      <input name="numero" [ngModel]="conta.numero" type="text" />
+  </div>
+</div>
+<div>  
+  <div>
+      <label>Titular</label>
+      <input name="titular" [ngModel]="conta.titular"/>
+  </div>
+</div>
+<div>
+  <div>
+      <button type="button" (click)="_adicionar()">Salvar</button>
+      <button>Cancelar</button>
+  </div>
+</div>
+
+<div>
+  <div>
+    <table>
+      <tbody *ngFor="let item of contas">
+        <tr>
+          <td>{{ item.banco }}</td>
+          <td>{{ item.agencia }}</td>
+          <td>{{ item.numero }}</td>
+          <td>{{ item.titular }}</td>
+          <td><button (click)="_editar(item)" >Editar</button></td>
+          <td><button (click)="_selecionar(item)" >Selecionar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

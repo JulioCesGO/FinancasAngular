@@ -1,0 +1,50 @@
+<p>
+  movimentacao works!
+</p>
+<div>
+  <div>
+    {{ conta }}
+  </div>
+</div>
+<div>
+  <div>
+    <label>Tipo</label>
+    <select *ngFor="let item of _tipos" [ngModel]="model.tipo">
+      <option value="{{item}}">{{item.nome}}</option>
+      </select>
+  </div>
+</div>
+<div>
+  <div>
+    <label>Descricao</label>
+    <input name="descricao" [ngModel]="model.descricao" type="text">
+  </div>
+</div>
+<div>
+  <div>
+    <label>Valor</label>
+    <input name="valor" [ngModel]="model.valor" type="number">
+  </div>
+</div>
+<div>
+  <div>
+    <button (click)="adicionar()" >Adicionar</button>
+    <button (click)="reset()" >Resetar</button>
+    <button (click)="voltar()" >Voltar</button>
+  </div>
+</div>
+
+<div>
+  <table>
+    <tbody *ngFor="let item of _movimentacoes"> 
+      <tr>
+        <td>{{ item.data }}</td>
+        <td>{{ item.descricao }}</td>
+        <td>{{ item.valor }}</td>  
+
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>
